@@ -1,0 +1,243 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+.titulo{
+    color: #EF6C00;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: -1px;
+	border-bottom: 1px solid black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.display svg .segment {
+	fill: rgba(110, 110, 110, 0.15);
+	transition: .3s ease-in-out;
+	
+}
+.svgpadrao{
+	display: none;
+}
+.display{
+	width: 105%¨ !important;
+}
+.container{
+	width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.newGame{
+	display: none;
+	justify-content: center;
+}
+.newGame button{
+	height: 45px;
+    background-image: linear-gradient(#434854, gray);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.number svg{
+	padding-right: 10px;
+}
+
+.dicaMaior,.dicaMenor{
+	visibility: hidden;
+	display: flex;
+    visibility: visible;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #FF6600;
+}
+.certo{
+	visibility: hidden;
+	display: flex;
+    visibility: visible;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #32BF00;
+}
+.erro{
+	visibility: hidden;
+	display: flex;
+    visibility: visible;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #CC3300;
+}
+.number{
+	display:flex;
+	justify-content: center;
+}
+.inputNbutton{
+	justify-content: center;
+    display: flex;
+	height: 45px;
+}
+.inputNbutton input{
+	width: 35%;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.inputNbutton button{
+	color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: #FF6600;
+}
+.display svg.num-1 .b,
+.display svg.num-1 .c,
+
+.display svg.num-2 .a,
+.display svg.num-2 .b,
+.display svg.num-2 .d,
+.display svg.num-2 .e,
+.display svg.num-2 .g,
+
+.display svg.num-3 .a,
+.display svg.num-3 .b,
+.display svg.num-3 .c,
+.display svg.num-3 .d,
+.display svg.num-3 .g,
+
+.display svg.num-4 .b,
+.display svg.num-4 .c,
+.display svg.num-4 .f,
+.display svg.num-4 .g,
+
+.display svg.num-5 .a,
+.display svg.num-5 .c,
+.display svg.num-5 .d,
+.display svg.num-5 .f,
+.display svg.num-5 .g,
+
+.display svg.num-6 .a,
+.display svg.num-6 .c,
+.display svg.num-6 .d,
+.display svg.num-6 .e,
+.display svg.num-6 .f,
+.display svg.num-6 .g,
+
+.display svg.num-7 .a,
+.display svg.num-7 .b,
+.display svg.num-7 .c,
+
+.display svg.num-8 .a,
+.display svg.num-8 .b,
+.display svg.num-8 .c,
+.display svg.num-8 .d,
+.display svg.num-8 .e,
+.display svg.num-8 .f,
+.display svg.num-8 .g,
+
+.display svg.num-9 .a,
+.display svg.num-9 .b,
+.display svg.num-9 .c,
+.display svg.num-9 .d,
+.display svg.num-9 .f,
+.display svg.num-9 .g,
+
+.display svg.num-0 .a,
+.display svg.num-0 .b,
+.display svg.num-0 .c,
+.display svg.num-0 .d,
+.display svg.num-0 .e,
+.display svg.num-0 .f {
+	fill: #000000;
+}
+.display svg.num-e5 .a,
+.display svg.num-e5 .c,
+.display svg.num-e5 .d,
+.display svg.num-e5 .f,
+.display svg.num-e5 .g,
+
+.display svg.num-e0 .a,
+.display svg.num-e0 .b,
+.display svg.num-e0 .c,
+.display svg.num-e0 .d,
+.display svg.num-e0 .e,
+.display svg.num-e0 .f,
+
+.display svg.num-e2 .a,
+.display svg.num-e2 .b,
+.display svg.num-e2 .d,
+.display svg.num-e2 .e,
+.display svg.num-e2 .g{
+	fill: #CC3300;
+}
+
+
+.display svg.num-a1 .b,
+.display svg.num-a1 .c,
+
+.display svg.num-a2 .a,
+.display svg.num-a2 .b,
+.display svg.num-a2 .d,
+.display svg.num-a2 .e,
+.display svg.num-a2 .g,
+
+.display svg.num-a3 .a,
+.display svg.num-a3 .b,
+.display svg.num-a3 .c,
+.display svg.num-a3 .d,
+.display svg.num-a3 .g,
+
+.display svg.num-a4 .b,
+.display svg.num-a4 .c,
+.display svg.num-a4 .f,
+.display svg.num-a4 .g,
+
+.display svg.num-a5 .a,
+.display svg.num-a5 .c,
+.display svg.num-a5 .d,
+.display svg.num-a5 .f,
+.display svg.num-a5 .g,
+
+.display svg.num-a6 .a,
+.display svg.num-a6 .c,
+.display svg.num-a6 .d,
+.display svg.num-a6 .e,
+.display svg.num-a6 .f,
+.display svg.num-a6 .g,
+
+.display svg.num-a7 .a,
+.display svg.num-a7 .b,
+.display svg.num-a7 .c,
+
+.display svg.num-a8 .a,
+.display svg.num-a8 .b,
+.display svg.num-a8 .c,
+.display svg.num-a8 .d,
+.display svg.num-a8 .e,
+.display svg.num-a8 .f,
+.display svg.num-a8 .g,
+
+.display svg.num-a9 .a,
+.display svg.num-a9 .b,
+.display svg.num-a9 .c,
+.display svg.num-a9 .d,
+.display svg.num-a9 .f,
+.display svg.num-a9 .g,
+
+.display svg.num-a0 .a,
+.display svg.num-a0 .b,
+.display svg.num-a0 .c,
+.display svg.num-a0 .d,
+.display svg.num-a0 .e,
+.display svg.num-a0 .f {
+	fill: #32BF00;
+}

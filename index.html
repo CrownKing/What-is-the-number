@@ -1,0 +1,84 @@
+<!--CODED BY: Jonathan Lopes Justino de Souza UFV-Florestal-->
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widrth, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- link para o icone de nova partida -->
+    </head>
+    <body>
+        <div class="container"> <!-- uma div container que está presente em quase todo o body, para facilitar o CSS -->
+            <div class="titulo">QUAL É O NÚMERO?</div>
+                <div class="dicaMaior" id="dicaMaior">
+                    É maior
+                </div>
+                <div class="dicaMenor" id="dicaMenor">
+                    É menor
+                </div>
+                <div class="certo" id="certo">
+                    Você Acertou!!!
+                </div>
+                <div class="erro" id="erro">
+                    ERRO
+                </div>
+                <div class="display">
+                    <div class="svgpadrao"> <!-- programação do display padrão que os outros seguirão de exemplo, está escondido pois essa declaração atrapalhou o CSS anteriormente-->
+                        <svg visibility ="hidden"width="130" height="240" viewBox="0 0 260 480">
+                            <defs>
+                                <g id="unit-h">
+                                    <path d="M0 20 L20 40 L180 40 L200 20 L180 0 L20 0 Z"></path> <!-- cada um dos segmentos do display -->
+                                </g>
+                                <g id="unit-v">
+                                    <path d="M20 0 L0 20 L0 180 L20 200 L40 180 L40 20 Z"></path>
+                                </g>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="number"><!--Os 3 displays de sete segmentos abaixo, a classe nele se refere ao numero que será exibido, se a classe receber 
+                    do js num-a** onde * é qualquer numero, significa acerto, num-e significa erro da api tratado individualmente já que 502 é o unico erro.-->
+                        <svg id="display1" class="num-0" width="130" height="240" viewBox="0 0 260 480">
+                            <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use> <!-- segmento b,c dois verticais à direita, e, f dois verticais à esquerda, a,d,g, os tres horizontais respectivamente-->
+                            <use xlink:href="#unit-v" class="segment b" x="220" y="30"></use>
+                            <use xlink:href="#unit-v" class="segment c" x="220" y="250"></use>
+                            <use xlink:href="#unit-h" class="segment d" x="30" y="440"></use>
+                            <use xlink:href="#unit-v" class="segment e" x="0" y="250"></use>
+                            <use xlink:href="#unit-v" class="segment f" x="0" y="30"></use>
+                            <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use><!--X,Y são posições dos segmentos dentro do display unit referente a se são horizontais ou verticais-->
+                        </svg>
+                        <svg id="display2" visibility="hidden" class="num-0" width="130" height="240" viewBox="0 0 260 480">
+                            <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>
+                            <use xlink:href="#unit-v" class="segment b" x="220" y="30"></use>
+                            <use xlink:href="#unit-v" class="segment c" x="220" y="250"></use>
+                            <use xlink:href="#unit-h" class="segment d" x="30" y="440"></use>
+                            <use xlink:href="#unit-v" class="segment e" x="0" y="250"></use>
+                            <use xlink:href="#unit-v" class="segment f" x="0" y="30"></use>
+                            <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use>
+                        </svg>
+                        <svg id="display3" visibility="hidden" class="num-0" width="130" height="240" viewBox="0 0 260 480">
+                            <use xlink:href="#unit-h" class="segment a" x="30" y="0"></use>
+                            <use xlink:href="#unit-v" class="segment b" x="220" y="30"></use>
+                            <use xlink:href="#unit-v" class="segment c" x="220" y="250"></use>
+                            <use xlink:href="#unit-h" class="segment d" x="30" y="440"></use>
+                            <use xlink:href="#unit-v" class="segment e" x="0" y="250"></use>
+                            <use xlink:href="#unit-v" class="segment f" x="0" y="30"></use>
+                            <use xlink:href="#unit-h" class="segment g" x="30" y="220"></use>
+                        </svg>
+                    </div> 
+                </div>
+                <div class="newGame" id="newGame">    
+                    <button onClick="requisicao()"> 
+                        <i class="
+                        glyphicon glyphicon-refresh"> NOVA PARTIDA</i> 
+                    </button> <!-- botão de novo jogo exibido em caso de acerto ou erro da API-->
+                </div>
+            <div class="inputNbutton"> <!-- div com o campo de chute e o botão de acerto do jogador-->
+                <input  placeholder="Digite o palpite" name="chute" type="number" id="chute" required>
+                <button onClick="verificaNumero()"> ENVIAR </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
